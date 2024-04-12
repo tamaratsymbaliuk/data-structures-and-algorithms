@@ -1,0 +1,15 @@
+//Given a non-empty array of integers nums, every element appears TWICE EXCEPT FOR ONE. Find that single one.
+You must implement a solution with a linear runtime complexity (Theta (n)) and use only constant extra space(Theta(1).
+
+
+class SingleNumber {
+    public int singleNumber(int[] nums) {
+        int a = 0;
+        for (int i: nums){
+            a = a^i;
+        }
+        return a;
+    }
+}
+
+//We're using XOR as a bitwise operation to cancel a pair of numbers.

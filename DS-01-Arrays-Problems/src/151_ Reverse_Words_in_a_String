@@ -27,4 +27,44 @@ class Solution {
         // Append the first word to the output (without trailing space)
         return result + str[0];
     }
+
+    not using trim and split methods
+
+public String reverseWords(String s) {
+
+
+        char[] str  = s.toCharArray();
+        char[] r = new char[s.length()+1];
+
+        int l =  s.length() - 1;
+        int j;
+        int k = 0;
+
+        while(l>=0){
+            while(l>=0 && str[l] == ' '){
+                l--;
+            }
+            if(l<0) break;
+            j = l;
+            while(l>=0 && str[l]!=' '){
+                l--;
+            }
+            for(int i = l+1;i<=j;i++){
+                r[k++] = str[i];
+            }
+            r[k++] = ' ';
+        }
+        return new String(r, 0 ,k-1);
+    }
+
 }
+
+Example 1:
+
+Input: s = "the sky is blue"
+Output: "blue is sky the"
+Example 2:
+
+Input: s = "  hello world  "
+Output: "world hello"
+Explanation: Your reversed string should not contain leading or trailing spaces.

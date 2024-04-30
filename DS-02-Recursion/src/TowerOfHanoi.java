@@ -13,10 +13,10 @@ public class TowerOfHanoi {
         hanoi(numberOfDisks, 1, 3, 2);
     }
 
-    private static void hanoi(int numberOfDisks, int startingPin, int finishPin, int intermidPid) {
+    private static void hanoi(int numberOfDisks, int s, int f, int i) {
         if (numberOfDisks == 0) return;
-        hanoi(numberOfDisks - 1, startingPin, intermidPid, finishPin);
-        System.out.println(startingPin + " " + finishPin);
-        hanoi(numberOfDisks - 1, intermidPid, finishPin, startingPin);
+        hanoi(numberOfDisks - 1, s, i, f);
+        System.out.println(s + " " + f);
+        hanoi(numberOfDisks - 1, i, f, s);
     }
 }

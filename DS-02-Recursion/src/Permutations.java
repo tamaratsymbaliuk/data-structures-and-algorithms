@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
+//Time: (n!) * n
+//Space O(n)
 public class Permutations {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> resultList = new ArrayList<>();

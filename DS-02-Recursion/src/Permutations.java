@@ -5,6 +5,9 @@ import java.util.List;
 //Time: (n!) * n
 //Space O(n)
 public class Permutations {
+    /*Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+
+     */
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> resultList = new ArrayList<>();
         backtrack(resultList, new ArrayList<>(), nums);

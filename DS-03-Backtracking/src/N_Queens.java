@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-
+//most optimized solution
 public class N_Queens {
     private int dimension;
     private int[] row;
@@ -65,7 +65,7 @@ public class N_Queens {
             current[r][c] = 'Q';
             row[r] = diag_aux[r + c] = diag_main[r - c + dimension - 1] = 1;
             backtrack(c + 1);
-            current[r][c] = '.';
+            current[r][c] = '.'; // important to leave a clean state
             row[r] = diag_aux[r + c] = diag_main[r - c + dimension - 1] = 0;
         }
     }

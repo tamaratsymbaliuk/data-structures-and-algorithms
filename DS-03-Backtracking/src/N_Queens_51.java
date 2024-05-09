@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 //most optimized solution
-public class N_Queens {
+public class N_Queens_51 {
     private int dimension;
     private int[] row;
     private int[] diag_aux;

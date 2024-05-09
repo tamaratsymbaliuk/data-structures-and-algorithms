@@ -1,4 +1,4 @@
-public class BeautifulArrangement {
+public class BeautifulArrangement_526 {
     private int count = 0;
 
     public int countArrangement(int n) {
@@ -23,7 +23,7 @@ public class BeautifulArrangement {
     }
 
     public static void main(String[] args) {
-        BeautifulArrangement arrangement = new BeautifulArrangement();
+        BeautifulArrangement_526 arrangement = new BeautifulArrangement_526();
         int n = 3;
         System.out.println("The number of beautiful arrangements for n = " + n + " is: " + arrangement.countArrangement(n));
     }

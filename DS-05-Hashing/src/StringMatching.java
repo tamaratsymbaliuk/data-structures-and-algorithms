@@ -20,22 +20,22 @@ public class StringMatching {
         int n = s.length();
         int m = t.length();
 
-        long p = 9973;
+        long p = 9937;
         long mod = (long) 1e9 + 7;
 
         // First compute the hash of pattern ( String t)
         long h_t = 0;
-        for (int i = 0; i < n; i++) {
-            long c = t.charAt(i); // ASCII code of the current character
+        for (int i = 0; i < m; i++) {
+            long c = t.charAt(i) - 'a'; // ASCII code of the current character
             h_t = (h_t * p + c) % mod;
         }
 
         // Second we compute hashes of each prefix of string (String s)
         long[] h_s = new long[n];
-        h_s[0] = s.charAt(0);
-        for (int i = 0; i < n; i++) {
+        h_s[0] = s.charAt(0) - 'a';
+        for (int i = 1; i < n; i++) {
             // to compute the hash of the next prefix we use hash of the previous prefix * p and + ASCII code and take mod
-            long c = s.charAt(i);
+            long c = s.charAt(i) - 'a';
             h_s[i] = (h_s[i - 1] * p + c) % mod;
         }
 
@@ -45,15 +45,21 @@ public class StringMatching {
             p_m = p_m * p % mod;
         }
 
+        int answer = 0;
+
         // Compare each m consecutive characters from string with pattern
         // Starting at prefix of length m
         for (int i = m - 1; i < n; i++) {
             long h = h_s[i];
             if (i > m - 1) {
+                // Whenever we have 2 numbers a and b and we want to compute (a - b) % mod,
+                // we actually need to compute (a - b + mod) % mod
                 h = (h - h_s[i - m] * p_m % mod + mod) % mod;
-
-                // Whenever we have 2 numbers a and b
+            }
+            if (h == h_t) {
+                answer++;
             }
         }
+        System.out.println(answer);
     }
 }

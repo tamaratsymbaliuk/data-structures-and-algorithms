@@ -8,6 +8,9 @@ public class LongestConsecutiveSequence128 {
 You must write an algorithm that runs in O(n) time.
      */
 
+    // T: O(n)
+    // This approach ensures O(n) time complexity because each element is processed a constant number of times.
+
     public static void main(String[] args) {
         int[] nums = {100,4,200,1,3,2};
         LongestConsecutiveSequence128 test = new LongestConsecutiveSequence128();
@@ -22,7 +25,7 @@ You must write an algorithm that runs in O(n) time.
         int answer = 0;
         for (int x : set) {
             if (!set.contains(x - 1)) { // only walk starting from the beginning of a streak
-                int i = x + 1;
+                int i = x + 1; // Initializes i to the next integer after x.
                 while (set.contains(i)) {
                     i++;
                 }

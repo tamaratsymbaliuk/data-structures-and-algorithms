@@ -24,7 +24,7 @@ You must write an algorithm that runs in O(n) time.
         }
         int answer = 0;
         for (int x : set) {
-            if (!set.contains(x - 1)) { // only walk starting from the beginning of a streak
+            if (!set.contains(x - 1)) { // only walk starting from the beginning of a streak, finds the smallest element
                 int i = x + 1; // Initializes i to the next integer after x.
                 while (set.contains(i)) {
                     i++;

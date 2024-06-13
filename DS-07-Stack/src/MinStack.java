@@ -5,9 +5,9 @@ public class MinStack {
     private Node head;
 
     public void push(int x) {
-        if (head == null)
+        if (head == null) // if the stack is empty, add to the head
             head = new Node(x, x, null);
-        else
+        else // if the stack is not empty
             head = new Node(x, Math.min(x, head.min), head);
     }
 
@@ -23,7 +23,7 @@ public class MinStack {
         return head.min;
     }
 
-    private class Node {
+    private class Node { // Singly-linked list, we always insert at the head of the linked list
         int val;
         int min;
         Node next;

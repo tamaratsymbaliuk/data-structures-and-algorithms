@@ -1,6 +1,9 @@
 import java.util.Stack;
 
 public class Implement_Queue_using_Stacks232 {
+    public static void main(String[] args) {
+
+    }
     /*
     https://leetcode.com/problems/implement-queue-using-stacks/description/
      */

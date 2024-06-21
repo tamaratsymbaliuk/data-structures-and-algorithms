@@ -1,13 +1,13 @@
 public class MyCircularQueue {
     // https://leetcode.com/problems/design-circular-queue/
     int maxSize, size = 0;
-    ListNode head = null, tail = null;
+    Node head = null, tail = null;
     public MyCircularQueue(int k) {
         maxSize = k;
     }
     public boolean enQueue(int val) {
         if (isFull()) return false;
-        ListNode newNode = new ListNode(val, null);
+        Node newNode = new Node(val);
         if (isEmpty()) head = tail = newNode;
         else {
             tail.next = newNode;
@@ -38,8 +38,8 @@ public class MyCircularQueue {
 
 class ListNode {
     int val;
-    ListNode next;
-    public ListNode(int val, ListNode next) {
+    Node next;
+    public ListNode(int val, Node next) {
         this.val = val;
         this.next = next;
     }

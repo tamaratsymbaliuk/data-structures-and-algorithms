@@ -46,5 +46,4 @@ public class FrontMiddleBackQueue {
     private int findMiddleIndex(){
         return (list.size() - 1) / 2;
     }
-
 }

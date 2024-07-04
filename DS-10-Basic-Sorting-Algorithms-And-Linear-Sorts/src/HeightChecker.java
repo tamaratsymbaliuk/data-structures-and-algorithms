@@ -11,6 +11,9 @@ public class HeightChecker {
     If swapped is true, iterate over the array again
     else
     stop the algorithm, array is sorted
+
+    Time: (worst case): O?
+    Space: (worst case): note that we don't need to create a sorted_copy in normal case
      */
     public static void main(String[] args) {
         HeightChecker test = new HeightChecker();

@@ -1,4 +1,4 @@
-public class HeightChecker {
+public class HeightCheckerBubbleSort {
     // https://leetcode.com/problems/height-checker/description/
 
     /*
@@ -12,11 +12,16 @@ public class HeightChecker {
     else
     stop the algorithm, array is sorted
 
-    Time: (worst case): O?
+    Time: (worst case): O? decreasing order [5,4,3,2,1], So O(n) passes in the worst case, each pass
+    takes O(n - 1) passes through the array, hence O(n^2) time complexity; after the first iteration the largest 5 is guaranteed to go to the end[4,3,2,1,5] and so on
     Space: (worst case): note that we don't need to create a sorted_copy in normal case
+    in general, O(1) constant space complexity - only 3 variables
+
+    Best case (Time): O(n). increasing order, it will do a single pass and break out of the while loop
+    Best case (Space):O (1)
      */
     public static void main(String[] args) {
-        HeightChecker test = new HeightChecker();
+        HeightCheckerBubbleSort test = new HeightCheckerBubbleSort();
         int[] array = {1,1,4,2,1,3};
         System.out.println(test.heightChecker(array));
     }
@@ -28,8 +33,9 @@ public class HeightChecker {
         for (int i = 0; i < n; i++) {
             sorted_copy[i] = heights[i];
         }
+        boolean swapped;
         while (true) {
-            boolean swapped = false;
+            swapped = false;
             for (int i = 0; i < n - 1; i++) {
                 if (sorted_copy[i] > sorted_copy[i + 1]) {
                     swap(sorted_copy, i, i + 1);

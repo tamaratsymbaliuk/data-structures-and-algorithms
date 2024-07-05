@@ -30,8 +30,8 @@ public class HeightCheckerCountSort {
             // frequency[4] = 1
             // frequency[5..100] = 0
         }
-        for (int i = 1, j = 0; i <= 100; i++) { //starting from i = 1 because student heights are generally positive integers, and the given problem assumes that the heights range from 1 to 100
-            while (frequency[i] > 0) {
+        for (int i = 1, j = 0; i <= 100; i++) { //starting from i = 1 because student heights are generally positive integers, and the given problem assumes that the heights range from 1 to 100 O(m)
+            while (frequency[i] > 0) { // in total, over all iterations of the for loop, the body of the while loop will execute O(n) times
                 sorted_copy[j] = i; // put the very first number
                 frequency[i]--; // decrease it's frequency by one
                 j++; // move to the next element
@@ -56,8 +56,8 @@ public class HeightCheckerCountSort {
         // * frequency[2] (1) > 0 - > true
         // * ...
 
-        // Time complexity:
-        // Space complexity:
+        // Time complexity: O(n + m)
+        // Space complexity: O(m)
 
 
         // let m = max_possible_value - min_possible_value + 1

@@ -21,7 +21,6 @@ public class SortAnArray912 {
             j++; // move to the next element
         }
     }
-
         for (int i = 0; i < n; i++) {
             nums[i] -= 50000;
         }

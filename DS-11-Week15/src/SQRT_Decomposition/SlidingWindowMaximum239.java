@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class SlidingWindowMaximum239 {
     //  https://leetcode.com/problems/sliding-window-maximum/description/
-
     public int[] maxSlidingWindow(int[] nums, int k) {
         // Build sqrt decomposition with operation "max" for nums.
         int n = nums.length;

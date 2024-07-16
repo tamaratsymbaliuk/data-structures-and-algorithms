@@ -15,7 +15,6 @@ public class SlidingWindowMaximum239 {
             int block = i / sqrt;
             block_max[block] = Math.max(block_max[block], nums[i]);
         }
-
         // Create the array of maximums of each window.
         // When k = 1, its size is n
         // When k = 2, its size is n-1
@@ -44,7 +43,6 @@ public class SlidingWindowMaximum239 {
                     j++;
                 }
             }
-
             // Save max of current window a[i .. i+k-1] to results[i]
             // results[i] = max(a[i .. i+k-1])
             results[i] = result;

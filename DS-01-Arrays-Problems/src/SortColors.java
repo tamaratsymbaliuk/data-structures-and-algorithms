@@ -21,7 +21,7 @@ public class SortColors {
     }
 
     public static void main(String[] args) {
-        int [] nums = {2,0,2,1,1,0};
+        int [] nums = {1,2,0,2,1,1,0};
         SortColors test = new SortColors();
         test.sortColors(nums);
         System.out.println(Arrays.toString(nums));

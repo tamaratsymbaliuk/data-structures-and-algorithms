@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class SortArrayByParity {
     public int[] sortArrayByParityII(int[] nums) {
         int i = 0;
@@ -25,5 +27,11 @@ public class SortArrayByParity {
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {4,2,5,7};
+        SortArrayByParity solution = new SortArrayByParity();
+        System.out.println(Arrays.toString(solution.sortArrayByParityII(nums)));
     }
 }

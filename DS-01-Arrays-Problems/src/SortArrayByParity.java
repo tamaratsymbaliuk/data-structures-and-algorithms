@@ -30,7 +30,7 @@ public class SortArrayByParity {
     }
 
     public static void main(String[] args) {
-        int[] nums = {4,2,5,7};
+        int[] nums = {4,2,5,7, 8};
         SortArrayByParity solution = new SortArrayByParity();
         System.out.println(Arrays.toString(solution.sortArrayByParityII(nums)));
     }

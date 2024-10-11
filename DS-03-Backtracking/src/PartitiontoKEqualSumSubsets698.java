@@ -50,7 +50,6 @@ public class PartitiontoKEqualSumSubsets698 {
             // Backtrack: unmark the number as used
             used[i] = false;
         }
-
         return false;
     }
 }

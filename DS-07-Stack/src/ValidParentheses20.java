@@ -2,7 +2,7 @@ import java.util.Stack;
 
 public class ValidParentheses20 {
     public static void main(String[] args) {
-        String s = "()[]{}";
+        String s = "((([])))";
         ValidParentheses20 test = new ValidParentheses20();
         System.out.println(test.isValid(s));
     }

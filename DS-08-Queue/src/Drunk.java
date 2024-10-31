@@ -59,7 +59,7 @@ public class Drunk {
             public StringTokenizer tokenizer;
 
             public InputReader (InputStream stream) {
-                reader = new BufferedReader(new InputStreamReader(stream), 32768);
+                reader = new BufferedReader(new InputStreamReader(stream), 32768); // InputStreamReader is a bridge from byte streams to character streams
                 tokenizer = null;
             }
 

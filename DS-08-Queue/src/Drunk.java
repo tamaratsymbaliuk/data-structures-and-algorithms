@@ -53,7 +53,6 @@ public class Drunk {
             //2 4 6 8 0
             //second 5
         }
-
         private  static class InputReader {
             public BufferedReader reader;
             public StringTokenizer tokenizer;

@@ -32,8 +32,6 @@ public class Implement_Queue_using_Stacks232 {
         output.pop();
         return x;
     }
-
-
     // Amortized O(1) - we do in total 3 operations (inserting in first stack, moving to the second stack and deleting) push, pop, peek
     public int peek() {
         if (output.empty())

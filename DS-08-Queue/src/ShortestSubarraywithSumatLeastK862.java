@@ -35,12 +35,15 @@ public class ShortestSubarraywithSumatLeastK862 {
     }
 
     public static void main(String[] args) {
+
         ShortestSubarraywithSumatLeastK862 solution = new ShortestSubarraywithSumatLeastK862();
+         /*
         int[] nums = {2, -1, 2};
         int k = 3;
         System.out.println(solution.shortestSubarray(nums, k));  // Output: 3
+         */
 
-        int[] nums2 = {1, 2};
+        int[] nums2 = {2, 2, 1, 1, 1, 1};
         int k2 = 4;
         System.out.println(solution.shortestSubarray(nums2, k2));  // Output: -1
     }

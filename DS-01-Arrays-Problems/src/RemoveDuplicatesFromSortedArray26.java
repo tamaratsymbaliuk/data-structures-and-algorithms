@@ -1,6 +1,7 @@
 public class RemoveDuplicatesFromSortedArray26 {
     public static int removeDuplicates(int[] nums) {
 
+
         int insertIndex = 1;
         for (int i = 1; i < nums.length; i++) {
             // We skip to next index if we see a duplicate element

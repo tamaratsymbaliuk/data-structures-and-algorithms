@@ -21,7 +21,6 @@ public class ElegantPermutedSum {
             minDeque.offerLast(nums[i]);
             maxDeque.offerLast(nums[n - i - 1]);
         }
-
     }
 }
 

@@ -12,7 +12,6 @@ public class ElegantPermutedSum {
 
     public int solution(int[] nums) {
         Arrays.sort(nums);
-
         Deque<Integer> maxDeque = new LinkedList<>();
         Deque<Integer> minDeque = new LinkedList<>();
 

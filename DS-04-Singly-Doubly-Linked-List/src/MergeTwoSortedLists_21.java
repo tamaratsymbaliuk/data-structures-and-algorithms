@@ -1,5 +1,5 @@
 public class MergeTwoSortedLists_21 {
-     class ListNode{
+     static class ListNode{
         int val;
         ListNode next;
         ListNode(){}
@@ -10,6 +10,7 @@ public class MergeTwoSortedLists_21 {
             this.val = val;
             this.next = next;
          }
+
 
 
     }
@@ -26,7 +27,23 @@ public class MergeTwoSortedLists_21 {
             return list2;
         }
 
+    }
 
+    public static void main(String[] args) {
+
+        ListNode l3 = new ListNode(4);
+        ListNode l2 = new ListNode(2, l3);
+        ListNode l1 = new ListNode(1, l2);
+
+
+
+        ListNode l6 = new ListNode(4);
+        ListNode l5 = new ListNode(3, l6);
+        ListNode l4 = new ListNode(1, l5);
+
+        MergeTwoSortedLists_21 test = new MergeTwoSortedLists_21();
+        test.mergeTwoLists(l1, l4);
+        System.out.println(test.mergeTwoLists(l1, l4));
 
 
     }

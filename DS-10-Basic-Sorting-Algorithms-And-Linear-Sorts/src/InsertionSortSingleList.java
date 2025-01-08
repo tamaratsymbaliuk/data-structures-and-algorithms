@@ -41,7 +41,5 @@ public class InsertionSortSingleList {
             }
         }
         return head;
-
     }
-
 }

@@ -6,7 +6,6 @@ public class HeightCheckerCountSort {
         int[] array = {1,1,4,2,1,3};
         System.out.println(test.heightChecker(array));
     }
-
     public int heightChecker(int[] heights) {
         int n = heights.length;
 

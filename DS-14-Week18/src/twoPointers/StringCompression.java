@@ -2,6 +2,7 @@ package twoPointers;
 
 public class StringCompression {
     public int compress(char[] chars) {
+
         int n = chars.length;
 
         int streakStart = 0; // beginning of the next streak

@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class SortArray912_CountingSort {
     public static void main(String[] args) {
         int[] nums = {5,2,3,1};
@@ -5,7 +7,6 @@ public class SortArray912_CountingSort {
         for (int i : test.sortArray(nums)) {
             System.out.println(i + " ");
         }
-
     }
     public int[] sortArray(int[] nums) {
         // Counting Sort
